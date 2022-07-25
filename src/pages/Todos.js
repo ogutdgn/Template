@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Layout from '../components/Layout/Layout';
 import { todosStore } from '../store/todosStore';
 
 
@@ -12,13 +13,15 @@ const Todos = () => {
   // console.log(todos);
 
   return (
+    <Layout>
     <div>
       {
         todos && todos.map((todo) => (
-          <p>{todo.title}</p>
+          <p key={todo.title}>{todo.title}</p>
         ))
       }
     </div>
+    </Layout>
   )
 }
 

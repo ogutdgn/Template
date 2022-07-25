@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import Layout from '../components/Layout/Layout';
 import { usersStore } from '../store/usersStore';
 
 const Users = () => {
@@ -11,13 +12,15 @@ const Users = () => {
   // console.log(users);
 
   return (
-    <div>
-      {
-        users && users.map((user) => (
-          <p>{user.name}</p>
-        ))
-      }
-    </div>
+    <Layout>
+      <div>
+        {
+          users && users.map((user) => (
+            <p key={user.name}>{user.name}</p>
+          ))
+        }
+      </div>
+    </Layout>
   )
 }
 
