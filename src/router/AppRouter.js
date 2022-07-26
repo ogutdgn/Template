@@ -17,7 +17,8 @@ import Order from "../pages/Order";
 import Profile from "../pages/Profile";
 import Saved from "../pages/Saved";
 import Settings from "../pages/Settings";
-import ServiceIntercepter from "../service/ServiceIntercepter"; 
+// import ServiceIntercepter from "../service/ServiceIntercepter"; 
+import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter"
 
 
 const AppRouter = () => {
@@ -26,7 +27,9 @@ const AppRouter = () => {
   return (
     <div>
         <BrowserRouter>
-        <ServiceIntercepter/>
+        {/* <ServiceIntercepter/> */}
+        <RequestFunc/>
+        <ResponseFunc/>
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/users" element={<Users/>} />

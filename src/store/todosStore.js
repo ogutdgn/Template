@@ -4,8 +4,9 @@ import { getTodos } from "../service/Service";
 
 export const todosStore = create((set) => ({
     todos: [],
+    error: null,
     fetchTodos: async () => {
-        const data = await getTodos();
-        set({ todos: data });
+        const [ data, error ] = await getTodos();
+        set({ todos: data || [], error: error });
     },
-}))
+}));

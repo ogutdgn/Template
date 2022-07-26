@@ -4,9 +4,10 @@ import { getUsers } from "../service/Service";
 
 export const usersStore = create((set) => ({
     users: [],
+    error: null,
     fetchUsers: async () => {
-        const data = await getUsers();
-        set({ users: data });
+        const [ data, error ] = await getUsers();
+        set({ users: data || [], error: error });
     },
 }));
 

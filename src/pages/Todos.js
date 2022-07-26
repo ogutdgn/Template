@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
 import Layout from '../components/Layout/Layout';
 import { todosStore } from '../store/todosStore';
+import AlertDialog from '../components/Alert/Alert';
 
 
 const Todos = () => {
-  const { fetchTodos, todos } = todosStore();
+  const { fetchTodos, todos, error } = todosStore();
 
   useEffect(() => {
     fetchTodos();
@@ -14,6 +15,11 @@ const Todos = () => {
 
   return (
     <Layout>
+      <div>
+        {
+          error && <AlertDialog/>
+        }
+      </div>
     <div>
       {
         todos && todos.map((todo) => (
