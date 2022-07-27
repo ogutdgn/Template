@@ -37,7 +37,7 @@ const AppRouter = () => {
                 <Route path="/file-manager" element={<FileManager/>} />
                 <Route path="/settings/profile" element={<Profile/>} />
                 <Route path="/settings/2fa" element={<NumberFa/>} />
-                <Route path="/settings/bills" element={<Bills/>} />
+                <Route path="/settings/billing" element={<Bills/>} />
                 <Route path="/messages" element={<Messages/>} />
                 <Route path="/order" element={<Order/>} />
                 <Route path="/settings" element={<Settings/>} />

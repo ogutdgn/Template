@@ -3,12 +3,12 @@ import axios from "axios";
     export const RequestFunc = () => {
         
         axios.interceptors.request.use((request) => {
-            console.log("request");
+            // console.log("request");
 
             return request;
 
         }, function (error) {
-            console.log("request error");
+            // console.log("request error");
 
             return error.response;
         });

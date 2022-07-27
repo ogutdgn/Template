@@ -1,33 +1,19 @@
-import React from 'react';
-import Urls from '../Urls';
-import { Link } from 'react-router-dom';
+import * as React from 'react';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
 
-const Header = () => {
+export default function ButtonAppBar() {
   return (
+    
     <div className="headerDiv">
-
-        <div className="title">
-            <h1>Template</h1>
-        </div>
-
-        <div className="links">
-            <ul>
-                {
-                    Urls.map((item) => {
-                        return(
-                            <li key={item.route}>
-                                <Link to={item.route} key={item.route} className="true">
-                                    {item.name}
-                                </Link>
-                            </li>
-                        )
-                    })
-                }
-            </ul>
-        </div>
-
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            DastugoTemplate
+          </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
     </div>
-  )
+    
+  );
 }
-
-export default Header

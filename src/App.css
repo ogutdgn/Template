@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+.App{
+  overflow: hidden;
+}
+
 .main-container {
   display: flex;
 }
@@ -106,6 +110,3 @@
   border-bottom: #fff 0.5px solid;
 }
 
-.App{
-  overflow: hidden;
-}
