@@ -37,9 +37,9 @@
   line-height: 0;
   margin-top: 10px;
 }
-.bars {
+/* .bars {
   width: 30px;
-}
+} */
 .hide {
   display: none;
 }
@@ -110,3 +110,26 @@
   border-bottom: #fff 0.5px solid;
 }
 
+.footerDiv{
+  bottom: 0;
+  position: absolute;
+  font-size: 10px;
+  
+}
+
+.footer{
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+
+.openBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.arrowIcon{
+  margin-left: 100px;
+}

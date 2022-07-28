@@ -22,7 +22,6 @@ export const getPageTitleByRoute = (path) => {
       }
     });
     return title;
-  
 }
 
 const routes = [

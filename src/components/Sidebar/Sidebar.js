@@ -5,6 +5,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import routes from "../Urls";
+import Footer from "../Footer/Footer"
 
 
 const SideBar = ({ children }) => {
@@ -44,17 +45,21 @@ const SideBar = ({ children }) => {
           className={`sidebar `}
         >
           <div className="top_section">
-            {/* <AnimatePresence>
-              {isOpen && (
-                <BsFillArrowLeftSquareFill/>
-              )}
-            </AnimatePresence> */}
 
             <div className="bars">
-              {/* <FaBars onClick={toggle} /> */}
               {
-                isOpen ? <BsFillArrowLeftSquareFill onClick={toggle}/> : <FaBars onClick={toggle}/>
+                isOpen ? (
+                  <div className="openBar">
+                    <motion.div>
+                      Pages
+                    </motion.div>
+                    <BsFillArrowLeftSquareFill onClick={toggle} className="arrowIcon"/>
+                  </div>
+                )  
+                : 
+                (<FaBars onClick={toggle}/> )
               }
+              
             </div>
           </div>
       
@@ -95,6 +100,11 @@ const SideBar = ({ children }) => {
                 </NavLink>
               );
             })}
+            <div className="footerDiv">
+              {
+                isOpen && <Footer/>
+              }
+            </div>
           </section>
         </motion.div>
 
