@@ -1,38 +1,41 @@
 import React from 'react';
 import "./Layout.css";
 import SideBar from '../Sidebar/Sidebar';
-import AlertDialog from '../Alert/Alert';
 import ButtonAppBar from '../Header/Header';
 import { getPageTitleByRoute } from '../Urls';
 
 
-const Layout = ({ children, error }) => {
+const Layout = ({ children }) => {
   
   const winHeight = window.innerHeight * 0.85
 
 
   return (
     <div className='allDiv'>
-      <SideBar/>
-      {
-        error && <AlertDialog/>
-      }
-      <div className='childs'>
-        <ButtonAppBar/>
+        <SideBar/>
 
-        <div className='pathName'>
-          {
-            getPageTitleByRoute(window.location.pathname)
-          }
-        </div>
+        <div className="headerSide">
+          <div>
+              <div className="disable-text-selection">
+                <ButtonAppBar/>
+                <div className='pathName'>
+                  {
+                    getPageTitleByRoute(window.location.pathname)
+                  }
+                </div>
+              </div>
 
-        <div style={{height: winHeight}} className='bodyWrapper'>
-          <div className='contentWrapper'>
-            {children}
+              <div className='childs'>
+                
+                <div style={{height: winHeight}} className='bodyWrapper'>
+                  <div className='contentWrapper enable-text-selection'>
+                    {children}
+                  </div>
+              </div>
           </div>
-        </div>
-        {/* <Footer/> */}
-      </div>
+
+          </div>
+        </div>  
       
     </div>
   )

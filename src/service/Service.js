@@ -5,13 +5,13 @@ const url = "https://jsonplaceholder.typicode.com/";
 
 const getUsers = async() => {
 
-    const { data, status } = await axios.get(url + "users12")
+    const { data, status } = await axios.get(url + "users")
         .then((response) => response);
 
-            console.log("status" + status)
+            // console.log("status" + status)
             if (status >= 400)
             {
-                console.log("status" + status);
+                // console.log("status" + status);
                 return [null, true]
             }
 
@@ -20,12 +20,12 @@ const getUsers = async() => {
 
 const getTodos = async() => {
     const { data, status } = await axios.get(url + "todos")
-        .then((response)=> response);
+        .then((response) => response);
 
             // console.log("status" + status)
             if (status >= 400) 
             {
-                console.log("status" + status);
+                // console.log("status" + status);
                 return [null, true]
             }
 

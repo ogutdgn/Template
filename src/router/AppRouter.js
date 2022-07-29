@@ -7,7 +7,6 @@ import {
 
 import React from 'react'
 import Home from "../pages/Home";
-import Users from "../pages/Users";
 import Todos from "../pages/Todos";
 import Bills from "../pages/Bills";
 import FileManager from "../pages/FileManager";
@@ -17,8 +16,8 @@ import Order from "../pages/Order";
 import Profile from "../pages/Profile";
 import Saved from "../pages/Saved";
 import Settings from "../pages/Settings";
-// import ServiceIntercepter from "../service/ServiceIntercepter"; 
 import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter"
+import UserCard from "../pages/Users";
 
 
 const AppRouter = () => {
@@ -32,7 +31,7 @@ const AppRouter = () => {
         <ResponseFunc/>
             <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/users" element={<Users/>} />
+                <Route path="/users" element={<UserCard/>} />
                 <Route path="/todos" element={<Todos/>} />
                 <Route path="/file-manager" element={<FileManager/>} />
                 <Route path="/settings/profile" element={<Profile/>} />

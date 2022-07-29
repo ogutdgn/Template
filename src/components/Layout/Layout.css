@@ -27,16 +27,29 @@
     background-color: rgb(0, 7, 61);
     color: white;
     height: 54px;
+    width: 100%;
 }
 
 .pathName{
     padding: 10px;
     margin-bottom: 5px;
-    width: 200%;
-    border-bottom-left-radius: 15px;
-    box-shadow: 1px 2px black;
+    /* width: 200%; */
+    /* box-shadow: 1px 2px black; */
     color: white;
     /* display: inline-flex;
     justify-content: center; */
-    background-color: rgb(0, 7, 150);
+    background-color: rgb(0, 7, 225);
+}
+.disable-text-selection{
+    -ms-user-select:none;
+    -moz-user-select:none;
+    -webkit-user-select:none;
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+     user-select:none;
+  }
+.headerSide{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
