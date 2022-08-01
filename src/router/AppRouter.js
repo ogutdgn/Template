@@ -7,7 +7,7 @@ import {
 
 import React from 'react'
 import Home from "../pages/Home";
-import Todos from "../pages/Todos";
+import Todos from "../pages/Todos/Todos";
 import Bills from "../pages/Bills";
 import FileManager from "../pages/FileManager";
 import Messages from "../pages/Messages";
@@ -17,7 +17,7 @@ import Profile from "../pages/Profile";
 import Saved from "../pages/Saved";
 import Settings from "../pages/Settings";
 import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter"
-import UserCard from "../pages/Users";
+import UserCard from "../pages/Users/Users";
 
 
 const AppRouter = () => {
