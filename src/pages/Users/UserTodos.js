@@ -2,6 +2,7 @@ import React from 'react';
 import { todosStore } from '../../store/todosStore';
 import { useEffect } from 'react';
 import AlertDialog from '../../components/Alert/Alert';
+import Card from '@mui/material/Card';
 
 const UserTodos = ({ username }) => {
   const { fetchUserTodos, userTodos, error } = todosStore();
@@ -11,20 +12,23 @@ const UserTodos = ({ username }) => {
     
   }, [fetchUserTodos, username]);
 
+
   return (
-    <div>
+    <Card className="eachPersonTodo">
       <div>
         {
           error && <AlertDialog/>
         }
       </div>
       
-      {
-        userTodos.map((userTodo) => (
-          <p>{userTodo.title}</p>
-        )) 
-      }
-    </div>
+      <div className="userTodo" style={{height: "450px"}} >
+        {
+          userTodos.map((userTodo) => (
+            <p>{userTodo.title}</p>
+          )) 
+        }
+      </div>
+    </Card>
   );
 }
 

@@ -10,7 +10,6 @@ import emptyProfile from "../../assets/imgs/empty-profile.svg";
 
 const User = ({ username, useremail, detailCallback}) => {
 
-
   return (
     <div>
         <Card className="user">
@@ -28,7 +27,7 @@ const User = ({ username, useremail, detailCallback}) => {
 
             <CardActions disableSpacing>
 
-            <IconButton aria-label="add to favorites" onClick={() => detailCallback(username)}>
+            <IconButton aria-label="add to favorites" onClick={(e) => detailCallback(username,)}>
                 <FcTodoList/>
             </IconButton>
 

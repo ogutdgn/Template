@@ -8,7 +8,7 @@
     justify-content: space-between;
     text-align: left;
     width: 450px;
-    margin: 10px 0px 10px 30px;
+    margin: 0px 0px 10px 30px;
 }
 
 .userAvatar{
@@ -17,4 +17,21 @@
 
 .userTodos{
     display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.userTodo{
+    height: 90%;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-right: 10px;
+}
+
+.eachPersonTodo{
+    height: 80%;
+}
+
+#activeUser{
+    color: red;
 }

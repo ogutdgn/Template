@@ -12,12 +12,13 @@ export default function UserCard() {
 
     const { fetchUsers, users, error } = usersStore();
     const [currentUser, setCurrentUser] = useState();
+
     useEffect(() => {
         fetchUsers();
       }, [fetchUsers])
 
       const handleUserClicked = (username) => {
-        console.log(username);
+        // console.log(username);
         setCurrentUser(username);
       }
   return (
