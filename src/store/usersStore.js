@@ -6,7 +6,7 @@ export const usersStore = create((set) => ({
     users: [],
     error: null,
     name: "",
-    fetchUsers: async () => {
+    fetchUsers: async() => {
         const [ data, error ] = await getUsers();
         set({ users: data || [], error: error });
     },

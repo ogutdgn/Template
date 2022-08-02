@@ -9,7 +9,6 @@ const Todo = ({ title }) => {
 
   const handleCheck = () => {
     setIsChecked(!isChecked);
-    
   }
 
   return (
