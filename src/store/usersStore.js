@@ -5,6 +5,7 @@ import { getUsers } from "../service/Service";
 export const usersStore = create((set) => ({
     users: [],
     error: null,
+    name: "",
     fetchUsers: async () => {
         const [ data, error ] = await getUsers();
         set({ users: data || [], error: error });

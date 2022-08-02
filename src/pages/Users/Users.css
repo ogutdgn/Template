@@ -1,7 +1,6 @@
 .users{
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .user{
@@ -9,9 +8,13 @@
     justify-content: space-between;
     text-align: left;
     width: 450px;
-    margin: 30px;
+    margin: 10px 0px 10px 30px;
 }
 
 .userAvatar{
     margin-right: 35px;
+}
+
+.eachUserTodo{
+    display: flex;
 }

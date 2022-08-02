@@ -1,6 +1,6 @@
 import { FaHome, FaUser, FaLock, FaMoneyBill } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
-import { FcTodoList } from "react-icons/fc"
+import { FcTodoList } from "react-icons/fc";
 import { BiCog } from "react-icons/bi";
 import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
 import { BsCartCheck } from "react-icons/bs";
