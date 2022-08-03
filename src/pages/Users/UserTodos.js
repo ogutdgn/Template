@@ -1,11 +1,12 @@
 import React from 'react';
 import { todosStore } from '../../store/todosStore';
 import { useEffect } from 'react';
-import AlertDialog from '../../components/Alert/Alert';
 import Card from '@mui/material/Card';
+import Todos from '../Todos/Todos';
+import { CardHeader } from '@mui/material';
 
 const UserTodos = ({ username }) => {
-  const { fetchUserTodos, userTodos, error } = todosStore();
+  const { fetchUserTodos } = todosStore();
 
   useEffect(() => {
     fetchUserTodos(username);
@@ -14,22 +15,12 @@ const UserTodos = ({ username }) => {
 
 
   return (
-    <Card className="eachPersonTodo">
-      
       <div>
-        {
-          error && <AlertDialog/>
-        }
+        <Card className="eachPersonTodo" id="userTodo">
+          <CardHeader title={`${username}'s Todos`}/>
+          <Todos/>
+        </Card>
       </div>
-      
-      <div className="userTodo" style={{height: "450px"}} >
-        {
-          userTodos.map((userTodo) => (
-            <p>{userTodo.title}</p>
-          )) 
-        }
-      </div>
-    </Card>
   );
 }
 

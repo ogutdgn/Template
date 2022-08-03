@@ -1,5 +1,5 @@
 import { FaHome, FaUser, FaLock, FaMoneyBill } from "react-icons/fa";
-import { MdMessage } from "react-icons/md";
+import { MdMessage, MdOutlineDashboard } from "react-icons/md";
 import { FcTodoList } from "react-icons/fc";
 import { BiCog } from "react-icons/bi";
 import { AiFillHeart, AiTwotoneFileExclamation } from "react-icons/ai";
@@ -29,6 +29,11 @@ const routes = [
       path: "/",
       name: "Home", 
       icon: <FaHome />,
+    },
+    {
+      path: "/dashboard",
+      name: "Dashboard",
+      icon: <MdOutlineDashboard/>
     },
     {
       path: "/users",

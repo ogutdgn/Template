@@ -21,16 +21,13 @@
     margin-top: 20px;
 }
 
-.userTodo{
-    height: 90%;
-    overflow: scroll;
-    overflow-x: hidden;
+#userTodo{
+    overflow-y: scroll;
     margin-right: 10px;
 }
 
 .eachPersonTodo{
-    height: 80%;
-    animation-duration: 0.5;
+    height: 500px;
 }
 
 .choosen{

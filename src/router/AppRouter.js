@@ -7,7 +7,7 @@ import {
 
 import React from 'react'
 import Home from "../pages/Home";
-import Todos from "../pages/Todos/Todos";
+import TodosPage from "../pages/Todos/TodosPage";
 import Bills from "../pages/Bills";
 import FileManager from "../pages/FileManager";
 import Messages from "../pages/Messages";
@@ -16,8 +16,10 @@ import Order from "../pages/Order";
 import Profile from "../pages/Profile";
 import Saved from "../pages/Saved";
 import Settings from "../pages/Settings";
-import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter"
+import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter";
 import UserCard from "../pages/Users/Users";
+import Dashboard from "../pages/Dashboard";
+import { PureComponent } from "react";
 
 
 const AppRouter = () => {
@@ -32,7 +34,8 @@ const AppRouter = () => {
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="/users" element={<UserCard/>} />
-                <Route path="/todos" element={<Todos/>} />
+                <Route path="/todos" element={<TodosPage/>} />
+                <Route path="/dashboard" element={<Dashboard/>} />
                 <Route path="/file-manager" element={<FileManager/>} />
                 <Route path="/settings/profile" element={<Profile/>} />
                 <Route path="/settings/2fa" element={<NumberFa/>} />
