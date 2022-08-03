@@ -8,11 +8,14 @@ import { FcTodoList } from "react-icons/fc";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import emptyProfile from "../../assets/imgs/empty-profile.svg";
 
-const User = ({ username, useremail, detailCallback}) => {
+const User = ({ username, useremail, detailCallback, currentUser}) => {
 
   return (
     <div>
         <Card className="user">
+        {
+            currentUser === username && <div className="choosen"></div>
+        }
 
             <CardHeader
             avatar={
@@ -27,7 +30,7 @@ const User = ({ username, useremail, detailCallback}) => {
 
             <CardActions disableSpacing>
 
-            <IconButton aria-label="add to favorites" onClick={(e) => detailCallback(username,)}>
+            <IconButton aria-label="add to favorites" onClick={() => detailCallback(username)}>
                 <FcTodoList/>
             </IconButton>
 

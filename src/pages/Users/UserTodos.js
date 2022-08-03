@@ -15,6 +15,7 @@ const UserTodos = ({ username }) => {
 
   return (
     <Card className="eachPersonTodo">
+      
       <div>
         {
           error && <AlertDialog/>

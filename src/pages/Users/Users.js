@@ -34,7 +34,7 @@ export default function UserCard() {
           {
             users && users.map((user) => {
               return(
-                <User username={user.name} useremail={user.email} detailCallback={handleUserClicked}/>
+                <User username={user.name} useremail={user.email} detailCallback={handleUserClicked} currentUser={currentUser}/>
               )
             })
           }
