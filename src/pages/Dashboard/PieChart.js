@@ -3,13 +3,20 @@ import Chart from "react-apexcharts";
 
 const PieChart = ({ mockData }) => {
 
-    // const [values, setValues] = useState(
-    //     [
-    //         {id: "water", value: value},
-    //         {id: "lemon", value: value},
-    //         {id: "sugar", value: value},
-    //     ]
-    // )
+  // const [mockData, setMockData] = useState([
+    
+  //   { title: "Water", value: 50, id: "water"},
+  //   { title: "Lemon", value: 50, id: "lemon"},
+  //   { title: "Sugar", value: 50, id: "sugar"},
+    
+  // ])
+
+  // setMockData(mockData.map((eachData) => {
+  //   if(eachData.id === id){
+  //     eachData.value = currentValue;
+  //   }
+  //   return eachData;
+  // }))
 
   return (
     <div>

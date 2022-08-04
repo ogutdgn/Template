@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '../../components/Layout/Layout';
 import "./Dashboard.css";
@@ -10,7 +9,7 @@ const Dashboard = () => {
   const [id, setId] = useState();
   const [currentValue, setCurrentValue] = useState();
 
-  const [mockData, setMockData] = ([
+  const [mockData, setMockData] = useState([
     
     { title: "Water", value: 50, id: "water"},
     { title: "Lemon", value: 50, id: "lemon"},
