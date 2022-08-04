@@ -19,7 +19,6 @@ import Settings from "../pages/Settings";
 import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter";
 import UserCard from "../pages/Users/Users";
 import Dashboard from "../pages/Dashboard";
-import { PureComponent } from "react";
 
 
 const AppRouter = () => {
