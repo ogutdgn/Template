@@ -1,0 +1,10 @@
+.sliderDiv{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.slider{
+    display: flex;
+    justify-content: center;
+}

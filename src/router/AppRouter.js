@@ -18,7 +18,7 @@ import Saved from "../pages/Saved";
 import Settings from "../pages/Settings";
 import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter";
 import UserCard from "../pages/Users/Users";
-import Dashboard from "../pages/Dashboard";
+import Dashboard from "../pages/Dashboard/Dashboard";
 
 
 const AppRouter = () => {
