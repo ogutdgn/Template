@@ -42,8 +42,6 @@ const Dashboard = () => {
 //! Render Page
   return (
     <Layout>
-
-
       <div className="dashBoard">
       <PieChart mockData={mockData}/>
 

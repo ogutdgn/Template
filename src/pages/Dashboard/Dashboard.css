@@ -8,12 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 80px;
 }
+
 
 .eachSlider{
     margin-left: 30px;
-}
-
-#pieChart{
-    background-color: red;
 }
