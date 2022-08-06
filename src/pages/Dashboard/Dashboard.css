@@ -4,11 +4,16 @@
     flex-direction: column;
 }
 
-.slider{
+.dashBoard{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .eachSlider{
     margin-left: 30px;
+}
+
+#pieChart{
+    background-color: red;
 }
