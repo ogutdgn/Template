@@ -9,6 +9,8 @@ const Dashboard = () => {
 
   const { getRandomNum, randomNums } = dashboardStore();
 
+  
+
 //! Data
   const [mockData, setMockData] = useState([
     { title: "Water", value: 50, id: "water", color: "blue", index: 0},
@@ -16,6 +18,8 @@ const Dashboard = () => {
     { title: "Sugar", value: 50, id: "sugar", color: "green", index: 2},   
   ])
   
+  const lemonPercentage = mockData[1].value * 100 / (mockData[0].value + mockData[1].value + mockData[2].value)
+  const lemonPercentageRounded = lemonPercentage.toFixed(1)
 //! Page Load
   useEffect(() => {
     getRandomNum();
@@ -46,11 +50,12 @@ const Dashboard = () => {
       <PieChart mockData={mockData}/>
 
         <div className="sliderDiv">
-          <SliderGroup dataArray={mockData} handleSlider={handleSlider}/>
+          <SliderGroup mockData={mockData} handleSlider={handleSlider}/>
         </div>
 
       </div>
       <button className="suprizeMe" onClick={handleSuprize}>Surprize Me</button>
+      <p>{lemonPercentageRounded}</p>
     </Layout>
   )
 }

@@ -1,12 +1,12 @@
 import React from 'react';
 import { Slider, Stack } from '@mui/material';
 
-const SliderGroup = ({ dataArray, handleSlider }) => {
+const SliderGroup = ({ mockData, handleSlider }) => {
 
   return (
     <div>
         {
-          dataArray.map(data => (
+          mockData.map(data => (
             <Stack spacing={5} direction="row" sx={{ mb: 1 }} alignItems="center">
 
                 <p>{data.title}</p>
