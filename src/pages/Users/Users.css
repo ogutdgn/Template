@@ -34,3 +34,55 @@
     background-color: rgb(45, 51, 89);
     width: 20px;
 }
+
+.addNewUser{
+    inline-size: 100px;
+    border: none;
+    background-color: #888888;
+    margin-bottom: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.newUserButton{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nameValues{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+.nameValues div{
+    margin-bottom: 30px;
+}
+
+.nameValues h5{
+    margin-bottom: 30px;
+}
+
+.newUserInfo{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.inputField{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputField input{
+    width: 400px;
+}
+
+.addNewUserCard{
+    padding: 20px;
+    height: 500px;
+    width: 560px;
+}
+
+.submitButton{
+    bottom: 0;
+}

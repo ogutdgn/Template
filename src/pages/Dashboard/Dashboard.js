@@ -55,7 +55,7 @@ const Dashboard = () => {
 
       </div>
       <button className="suprizeMe" onClick={handleSuprize}>Surprize Me</button>
-      <p>{lemonPercentageRounded}</p>
+      <p>We made you <span className="percantageSpan">{lemonPercentageRounded}%</span> lemonade solution</p>
     </Layout>
   )
 }
