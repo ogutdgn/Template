@@ -17,7 +17,7 @@ import Profile from "../pages/Profile";
 import Saved from "../pages/Saved";
 import Settings from "../pages/Settings";
 import { ResponseFunc, RequestFunc } from "../service/ServiceIntercepter";
-import UserCard from "../pages/Users/Users";
+import UserPage from "../pages/Users/UserPage";
 import Dashboard from "../pages/Dashboard/Dashboard";
 
 
@@ -32,7 +32,7 @@ const AppRouter = () => {
         <ResponseFunc/>
             <Routes>
                 <Route path="/" element={<Home/>} />
-                <Route path="/users" element={<UserCard/>} />
+                <Route path="/users" element={<UserPage/>} />
                 <Route path="/todos" element={<TodosPage/>} />
                 <Route path="/dashboard" element={<Dashboard/>} />
                 <Route path="/file-manager" element={<FileManager/>} />

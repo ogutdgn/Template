@@ -10,6 +10,7 @@ const Todos = () => {
   const { fetchTodos, todos, error } = todosStore();
 
   useEffect(() => {
+    console.log("todolar fetch oluyo");
     fetchTodos();
   }, [fetchTodos])
 
@@ -26,8 +27,8 @@ const Todos = () => {
         </div>
         <div>
           {
-            todos && todos.map((todo) => (
-              <Todo title={todo.title}/>
+            todos && todos.map((todo, index) => (
+              <Todo title={todo.title} key={index}/>
             ))
           }
         </div>

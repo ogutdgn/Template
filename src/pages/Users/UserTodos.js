@@ -3,12 +3,13 @@ import Card from '@mui/material/Card';
 import Todos from '../Todos/Todos';
 import { CardHeader } from '@mui/material';
 
-const UserTodos = ({ username }) => {
+const UserTodos = ({ currentUser }) => {
+
 
   return (
       <div>
         <Card className="eachPersonTodo" id="userTodo">
-          <CardHeader title={`${username}'s Todos`}/>
+          <CardHeader title={`${currentUser?.name}'s Todos`}/>
           <Todos/>
         </Card>
       </div>

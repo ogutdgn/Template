@@ -14,7 +14,6 @@ const getUsers = async() => {
                 // console.log("status" + status);
                 return [null, true]
             }
-            console.log(data)
         return [data, null];
     } 
 

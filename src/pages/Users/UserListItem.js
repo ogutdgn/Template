@@ -7,14 +7,18 @@ import IconButton from '@mui/material/IconButton';
 import { FcTodoList } from "react-icons/fc";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import emptyProfile from "../../assets/imgs/empty-profile.svg";
+import { usersStore } from '../../store/usersStore';
 
-const User = ({ username, useremail, detailCallback, currentUser}) => {
+const UserListItem = ({ user, index, openUserForm, openTodoList }) => {
+
+    const { setCurrentUser, currentUser } = usersStore();
+    const {name, email} = user
 
   return (
     <div>
-        <Card className="user">
+        <Card className="user" key={index}>
         {
-            currentUser === username && <div className="choosen"></div>
+            currentUser?.name === name && <div className="choosen"></div>
         }
 
             <CardHeader
@@ -24,22 +28,18 @@ const User = ({ username, useremail, detailCallback, currentUser}) => {
                 </Avatar>
             }
             
-            title={username}
-            subheader={useremail}
+            title={name}
+            subheader={email}
             />
 
             <CardActions disableSpacing>
 
-            <IconButton aria-label="add to favorites" onClick={() => detailCallback(username)}>
+            <IconButton onClick={() => {setCurrentUser(user); openTodoList();}}>
                 <FcTodoList/>
             </IconButton>
 
-            {/* <IconButton aria-label="share">
-                <ShareIcon style={{color: "rgb(0, 7, 225)"}}/>
-            </IconButton> */}
-
-            <IconButton aria-label="settings">
-                <MoreVertIcon />
+            <IconButton onClick={() => {setCurrentUser(user); openUserForm();}}>
+                <MoreVertIcon/>
             </IconButton>
             
             </CardActions>
@@ -48,4 +48,4 @@ const User = ({ username, useremail, detailCallback, currentUser}) => {
   )
 }
 
-export default User
+export default UserListItem;
