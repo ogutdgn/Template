@@ -31,7 +31,7 @@ const UserList = () => {
   }
 
   const addNewUser = () => {
-    setCurrentUser(null);
+    setCurrentUser(false);
     openUserForm();
   }
   
@@ -51,7 +51,7 @@ const UserList = () => {
           {
             users && users.map((user, index) => {
               return(
-                <UserListItem  openTodoList={openTodoList} openUserForm={openUserForm} user={user} index={index} currentUser={currentUser}/>
+                <UserListItem openTodoList={openTodoList} openUserForm={openUserForm} user={user} index={index} currentUser={currentUser}/>
               )
             })
           }
@@ -60,7 +60,7 @@ const UserList = () => {
             todoList && <UserTodos currentUser={currentUser}/>
           }
           {
-            userForm && <UserForm setTodoList={setTodoList} setUserForm={setUserForm} currentUser={currentUser}/>
+            userForm && <UserForm setTodoList={setTodoList} setUserForm={setUserForm} currentUser={currentUser} divRef={divRef}/>
           }
         </div>
       </div>

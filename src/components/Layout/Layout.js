@@ -7,7 +7,7 @@ import { getPageTitleByRoute } from '../Urls';
 
 const Layout = ({ children }) => {
   
-  const winHeight = window.innerHeight * 0.8
+  let winHeight = window.innerHeight * 0.8
 
   console.log("layout");
   return (

@@ -17,21 +17,18 @@ export const usersStore = create((set, get) => ({
         set({ currentUser: user });
     },
 
-    addOrChangeUser: (name, username, email, id) => {
-        const { users } = get();
-        let idList = [];
+    addOrChangeUser: (newUser, updateUser, id) => {
+        const { users, setCurrentUser } = get();
         let largestNum = 0;
 
-        console.log(id);
-
-        if(id !== null)
+        if(id !== undefined)
         {
             console.log("şuradayım");
             users.forEach((user) => {
                 if(user.id === id){
-                    user.name = name;
-                    user.username = username;
-                    user.email = email;
+                    user.name = updateUser.name;
+                    user.username = updateUser.username;
+                    user.email = updateUser.email;
                 }
             })
         }else{
@@ -42,9 +39,9 @@ export const usersStore = create((set, get) => ({
                 }
             })
       
-            const newData = {id: largestNum + 1, name: name, username: username, email: email}
-            users.push(newData)
-
+            const createdUser = {id: largestNum + 1, name: newUser.name, username: newUser.username, email: newUser.email}
+            users.push(createdUser)
+            setCurrentUser(createdUser)
         }
         set({ users: users})
     }
