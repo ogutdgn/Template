@@ -6,8 +6,6 @@ import "./Users.css";
 import UserListItem from './UserListItem';
 import UserTodos from './UserTodos';
 import UserForm from './UserForm';
-
-
 const UserList = () => {
 
   const { fetchUsers, users, error, currentUser, setCurrentUser } = usersStore();
@@ -34,13 +32,16 @@ const UserList = () => {
     setCurrentUser(false);
     openUserForm();
   }
+
   
+
   return (
     <div>
       <div>
         {
-          error && <AlertDialog/>
+          error && <AlertDialog error={error}/>
         }
+        
       </div>
 
       <div className="userTodos" ref={divRef}>
@@ -51,7 +52,7 @@ const UserList = () => {
           {
             users && users.map((user, index) => {
               return(
-                <UserListItem openTodoList={openTodoList} openUserForm={openUserForm} user={user} index={index} currentUser={currentUser}/>
+                <UserListItem openTodoList={openTodoList} openUserForm={openUserForm} user={user} index={index} />
               )
             })
           }

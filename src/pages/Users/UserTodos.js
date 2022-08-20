@@ -1,6 +1,6 @@
 import React from 'react';
 import Card from '@mui/material/Card';
-import Todos from '../Todos/Todos';
+import TodoList from '../Todos/TodoList';
 import { CardHeader } from '@mui/material';
 
 const UserTodos = ({ currentUser }) => {
@@ -10,7 +10,7 @@ const UserTodos = ({ currentUser }) => {
       <div>
         <Card className="eachPersonTodo" id="userTodo">
           <CardHeader title={`${currentUser?.name}'s Todos`}/>
-          <Todos/>
+          <TodoList/>
         </Card>
       </div>
   );

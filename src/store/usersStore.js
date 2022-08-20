@@ -1,7 +1,6 @@
 import create from "zustand";
 import { getUsers } from "../service/Service";
 
-
 export const usersStore = create((set, get) => ({
     users: [],
     error: null,
@@ -16,9 +15,8 @@ export const usersStore = create((set, get) => ({
     setCurrentUser: (user) => {
         set({ currentUser: user });
     },
-
     addOrChangeUser: (newUser, updateUser, id) => {
-        const { users, setCurrentUser } = get();
+        const { users, setCurrentUser, currentUser } = get();
         let largestNum = 0;
 
         if(id !== undefined)
@@ -31,6 +29,8 @@ export const usersStore = create((set, get) => ({
                     user.email = updateUser.email;
                 }
             })
+            console.log(updateUser);
+            console.log(currentUser);
         }else{
             console.log("buradayım");
             users.forEach((user) => {
@@ -43,40 +43,21 @@ export const usersStore = create((set, get) => ({
             users.push(createdUser)
             setCurrentUser(createdUser)
         }
-        set({ users: users})
+        set({ users: users })
+    },
+
+    deleteUser: () => {
+        const { users, setCurrentUser, currentUser } = get();
+        users.forEach((eachUser) => {
+            if(eachUser.id === currentUser.id){
+                console.log(currentUser)
+                console.log(users.indexOf(currentUser))
+                users.splice(users.indexOf(currentUser), 1);
+            }
+        })  
+        console.log(users);
+        setCurrentUser(users[0]);
     }
-
-
-    // addUser: async(name, username, email) => {
-    //     const { users } = get();
-
-    //     let idList = [];
-        
-    //     users.forEach((user) => {
-    //         idList.push(user.id);
-    //     })
-
-    //     let largestNum = 0;
-    //     for (let i = 0; i < idList.length; i++) {
-    //         if(largestNum < idList[i]){
-    //             largestNum = idList[i]
-    //         }
-    //     }  
-          
-    //     const newData = {id: largestNum + 1, name: name, username: username, email: email}
-    //     users.push(newData)
-    //     set({ users: users})
-    // },
-    // changeUser: (id, changingUser) => {
-    //     const { users } = get();
-    //     users.forEach(user => {
-    //         if(user.id === id){
-    //             user.name = changingUser.name
-    //             user.username = changingUser.username
-    //             user.email = changingUser.email
-    //         }
-    //     })
-    // }
 }));
 
 

@@ -1,18 +1,44 @@
 .todo.checked{
     text-decoration: line-through;
+    font-style: italic;
     color: green;
 }
 
 .todo{
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    text-align: left;
+    margin-bottom: 20px;
     border: 1px solid grey;
     align-items: center;
     width: 500px;
-    padding: 5px;
+    height: 60px;
+}
+
+.leftSideOfCard{
+    display: flex;
+    align-items: center;
 }
 
 .todo p{
-    margin-top: 10px;
+    margin: 10px;
 }
+
+.needToDo{
+    background-color: #ff8c00;
+    width: 20px;
+    height: 60px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.eachTodo{
+    display: flex;
+    margin-left: 10px;
+}
+
+.todoTitle{
+    max-width: 400px;
+}
+
+

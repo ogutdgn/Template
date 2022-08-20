@@ -1,15 +1,15 @@
-import React from 'react'
-import Layout from '../../components/Layout/Layout'
-import Todos from './Todos'
+import React from 'react';
+import Layout from '../../components/Layout/Layout';
+import TodoList from './TodoList';
 
 const TodosPage = () => {
   return (
     <div>
         <Layout>
-            <Todos/>
+            <TodoList/>
         </Layout>
     </div>
   )
 }
 
-export default TodosPage
+export default TodosPage;

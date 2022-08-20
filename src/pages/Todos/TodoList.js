@@ -3,7 +3,7 @@ import { todosStore } from '../../store/todosStore';
 import AlertDialog from '../../components/Alert/Alert';
 
 import "./Todos.css";
-import Todo from './Todo';
+import TodoListItem from './TodoListItem';
 
 
 const Todos = () => {
@@ -19,16 +19,16 @@ const Todos = () => {
   
   return (
 
-      <div>
+      <div className='disable-text-selection'>
         <div>
           {
-            error && <AlertDialog/>
+            error && <AlertDialog error={error}/>
           }
         </div>
         <div>
           {
             todos && todos.map((todo, index) => (
-              <Todo title={todo.title} key={index}/>
+              <TodoListItem todos={todos} todo={todo} key={index}/>
             ))
           }
         </div>
