@@ -1,4 +1,4 @@
-.todo.checked{
+.todo.checked input{
     text-decoration: line-through;
     font-style: italic;
     color: green;
@@ -41,4 +41,8 @@
     max-width: 400px;
 }
 
-
+.todoTitle input{
+    border: none;
+    margin-left: 10px;
+    width: 350px;
+}

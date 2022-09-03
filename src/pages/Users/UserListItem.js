@@ -22,7 +22,7 @@ const UserListItem = ({ user, index, openUserForm, openTodoList }) => {
     //let msg, title, okeyCallBack ;
 
     const deleteChoosenUser = () => {
-        deleteUser(currentUser);
+        deleteUser();
         setConfirmStatus(false);
     }
 
@@ -31,13 +31,13 @@ const UserListItem = ({ user, index, openUserForm, openTodoList }) => {
         setConfirmStatus(false);
     }
 
-    const handleDeleteButton = () => {
+    const handleDeleteUser = () => {
         setCurrentUser(user);
         setConfirmParams({msg: "Siliyorum", title: "Delete okeymi?", okeyCallBack: deleteChoosenUser});
         setConfirmStatus(true);
     }
 
-    const handleEditButton = () => {
+    const handleEditUser = () => {
         setCurrentUser(user);
         setConfirmParams({msg: "Editliyom", title: "Edit okeymi?", okeyCallBack: editChoosenUser});
         setConfirmStatus(true);
@@ -63,19 +63,18 @@ const UserListItem = ({ user, index, openUserForm, openTodoList }) => {
 
             <CardActions disableSpacing>
 
-            <IconButton onClick={() => handleDeleteButton()}>
-                <MdDelete/>
-            </IconButton>
+                <IconButton onClick={() => handleDeleteUser()}>
+                    <MdDelete/>
+                </IconButton>
 
-            <IconButton onClick={() => {setCurrentUser(user); openTodoList();}}>
-                <FcTodoList/>
-            </IconButton>
+                <IconButton onClick={() => {setCurrentUser(user); openTodoList();}}>
+                    <FcTodoList/>
+                </IconButton>
 
-            <IconButton onClick={() => handleEditButton()}>
-                <MoreVertIcon/>
-            </IconButton>
+                <IconButton onClick={() => handleEditUser()}>
+                    <MoreVertIcon/>
+                </IconButton>
 
-            
             </CardActions>
         </Card>
 

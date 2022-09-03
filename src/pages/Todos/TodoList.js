@@ -15,7 +15,7 @@ const Todos = () => {
   }, [fetchTodos])
 
   
-  // console.log(todos);
+  //console.log(todos);
   
   return (
 
@@ -28,7 +28,7 @@ const Todos = () => {
         <div>
           {
             todos && todos.map((todo, index) => (
-              <TodoListItem todos={todos} todo={todo} key={index}/>
+              <TodoListItem todo={todo} index={index}/>
             ))
           }
         </div>

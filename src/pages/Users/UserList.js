@@ -13,6 +13,7 @@ const UserList = () => {
   const [todoList, setTodoList] = useState(true);
 
   useEffect(() => {
+      console.log("userlar fetch oluyo");
       fetchUsers();
     }, [fetchUsers])
   

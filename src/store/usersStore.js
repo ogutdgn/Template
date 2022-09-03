@@ -38,7 +38,7 @@ export const usersStore = create((set, get) => ({
                     largestNum = user.id
                 }
             })
-      
+
             const createdUser = {id: largestNum + 1, name: newUser.name, username: newUser.username, email: newUser.email}
             users.push(createdUser)
             setCurrentUser(createdUser)
@@ -48,14 +48,16 @@ export const usersStore = create((set, get) => ({
 
     deleteUser: () => {
         const { users, setCurrentUser, currentUser } = get();
+        
         users.forEach((eachUser) => {
             if(eachUser.id === currentUser.id){
-                console.log(currentUser)
-                console.log(users.indexOf(currentUser))
+                //console.log(currentUser)
+                //console.log(users.indexOf(currentUser))
                 users.splice(users.indexOf(currentUser), 1);
             }
         })  
         console.log(users);
+        //set({ users: users})
         setCurrentUser(users[0]);
     }
 }));
